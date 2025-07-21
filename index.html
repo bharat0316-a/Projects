@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bharat Poojari - BCA Student, Developer Portfolio with projects like reverse tunnel, DropX, full-stack apps and certifications.">
+  <title>Bharat Poojari - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #f0f4f8 0%, #ffffff 100%);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: #2d2d2d;
+      color: white;
+      padding: 4rem 1rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+    header img {
+      width: 120px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3.5rem;
+    }
+    header p {
+      margin-top: 1rem;
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+    .menu-toggle {
+      background: #000;
+      border: none;
+      font-size: 1.3rem;
+      color: white;
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 1100;
+      padding: 0.3rem 0.7rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+    nav {
+      background: #1f2937;
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 1050;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover,
+    nav a.active {
+      color: #60a5fa;
+      border-bottom: 2px solid #60a5fa;
+    }
+    section {
+      max-width: 1000px;
+      margin: 6rem auto 2rem;
+      padding: 2.5rem;
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+    }
+    h2 {
+      color: #1f2937;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 0.6rem;
+      margin-bottom: 1.5rem;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1.2rem;
+      background: #1f2937;
+      color: white;
+      margin-top: 3rem;
+    }
+    .skills span {
+      display: inline-block;
+      background: #e0f2fe;
+      color: #0369a1;
+      margin: 0.4rem;
+      padding: 0.5rem 1.2rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: all 0.3s;
+    }
+    .skills span:hover {
+      transform: scale(1.08);
+      background: #bae6fd;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .timeline {
+      border-left: 3px solid #3b82f6;
+      margin-left: 1.5rem;
+      padding-left: 1.5rem;
+    }
+    .timeline li {
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    .timeline li::before {
+      content: '';
+      position: absolute;
+      left: -1.4rem;
+      top: 0.4rem;
+      width: 0.9rem;
+      height: 0.9rem;
+      background: #3b82f6;
+      border-radius: 50%;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.6rem 1.5rem;
+      background: linear-gradient(135deg, #3b82f6, #60a5fa);
+      color: white;
+      border-radius: 12px;
+      text-decoration: none;
+      margin: 0.5rem 0.5rem 0 0;
+      transition: all 0.4s;
+      font-weight: 600;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+    .btn:hover {
+      transform: scale(1.08);
+      background: linear-gradient(135deg, #2563eb, #3b82f6);
+    }
+    .project-buttons {
+      margin-top: 0.5rem;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      header p {
+        font-size: 1.1rem;
+      }
+      .menu-toggle {
+        display: block;
+        position: sticky;
+        top: 0;
+      }
+      nav {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 60%;
+        height: 44%;
+        background: #1f2937;
+        z-index: 1050;
+        align-items: center;
+        padding-top: 2rem;
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
+        box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out;
+      }
+      nav.active {
+        display: flex;
+      }
+      nav a {
+        margin: 1rem 0;
+      }
+      section {
+        margin: 5rem 1rem 1rem;
+        padding: 1.5rem;
+      }
+      .btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="menu-toggle" aria-label="Toggle navigation menu" onclick="toggleMenu()">☰</button>
+  <header>
+    <h1>Bharat Poojari</h1>
+    <p>BCA Student | Creative Developer & Tech Explorer</p>
+  </header>
+
+  <nav>
+    <a href="#about" onclick="closeMenu()">About</a>
+    <a href="#skills" onclick="closeMenu()">Skills</a>
+    <a href="#projects" onclick="closeMenu()">Projects</a>
+    <a href="#certifications" onclick="closeMenu()">Certifications</a>
+    <a href="#education" onclick="closeMenu()">Education</a>
+    <a href="#contact" onclick="closeMenu()">Contact</a>
+  </nav>
+
+  <!-- content continues unchanged -->
+
+  <script>
+    // Mobile menu toggle stays fixed while scrolling
+    window.addEventListener('scroll', () => {
+      const toggle = document.querySelector('.menu-toggle');
+      toggle.style.position = 'fixed';
+      toggle.style.top = '1rem';
+    });
+
+    function toggleMenu() {
+      document.querySelector('nav').classList.toggle('active');
+    }
+
+    function closeMenu() {
+      if (window.innerWidth <= 768) {
+        document.querySelector('nav').classList.remove('active');
+      }
+    }
+  </script>
+
+  <section id="about" class="fade-in">
+    <h2>About Me</h2>
+    <p>I’m a 5th semester BCA student from J.M.J BCA College, Chipgi with a CGPA of 8.85. I’m passionate about full-stack development, reverse engineering, and system design. I’ve created tunneling tools like Ngrok, responsive websites, and backend systems. I am constantly learning and enjoy building solutions with real-world impact.</p>
+    <a href="resumes.pdf" download class="btn">📄 Download Resume</a>
+  </section>
+
+  <section id="skills" class="fade-in">
+    <h2>Technical Skills</h2>
+    <div class="skills">
+      <span><i class="devicon-java-plain colored"></i> Java</span>
+      <span><i class="devicon-c-plain colored"></i> C</span>
+      <span><i class="devicon-python-plain colored"></i> Python</span>
+      <span><i class="devicon-html5-plain colored"></i> HTML</span>
+      <span><i class="devicon-css3-plain colored"></i> CSS</span>
+      <span><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+      <span><i class="devicon-php-plain colored"></i> PHP</span>
+      <span><i class="devicon-mysql-plain colored"></i> MySQL</span>
+    </div>
+  </section>
+
+  <section id="projects" class="fade-in">
+    <h2>Projects</h2>
+    <ul class="timeline">
+      <li data-aos="fade-up">
+        <strong>Reverse Proxy Tunneling Tool:</strong> Built a Python-based Ngrok alternative using Flask to expose local servers with custom domain tunneling.
+        <div class="project-buttons">
+          <a href="#" class="btn">🔗 GitHub</a>
+          <a href="#" class="btn">🌐 Live Demo</a>
+        </div>
+      </li>
+      <li data-aos="fade-up">
+        <strong>Portfolio & Web Apps:</strong> Designed modern, responsive websites with frontend-backend integration using HTML, CSS, JS, PHP & MySQL.
+        <div class="project-buttons">
+          <a href="#" class="btn">🔗 GitHub</a>
+          <a href="#" class="btn">🌐 Live Demo</a>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section id="certifications" class="fade-in">
+    <h2>Certifications</h2>
+    <ul>
+      <li>IoT Network Specialist – Skill India Hub (Reliance Foundation)</li>
+      <li>Front-End Development – Skill India Hub (Reliance Foundation)</li>
+    </ul>
+  </section>
+
+  <section id="education" class="fade-in">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>BCA</strong> – J.M.J BCA College, Chipgi | 5th Semester | CGPA: 8.85</li>
+      <li><strong>PUC</strong> – Sridevi PU College, Sirsi | 88.33%</li>
+      <li><strong>SSLC</strong> – SuryaNarayan High School, Bisalakoppa | 93.76%</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="fade-in">
+    <h2>Contact</h2>
+    <p><strong>📍 Address:</strong> Vidyanagar Yekkambi, Bisalakoppa, Post: Yekkambi, Sirsi, Uttara Kannada, Karnataka - 581358</p>
+    <p><strong>📞 Phone:</strong> 8073750997</p>
+    <p><strong>✉️ Email:</strong> bharat0132@outlook.com</p>
+    <p><strong>🌐 GitHub:</strong> <a href="https://github.com/bharat0316-a">github.com/bharat0316</a></p>
+    <p><strong>💼 LinkedIn:</strong> <a href="https://www.linkedin.com/in/bharat-poojari-397618359">linkedin.com/in/Bharat-Poojari</a></p>
+    <p><strong>Languages:</strong> Kannada, English, Hindi</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Bharat Poojari. All rights reserved.
+  </footer>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -100px 0px"
+    };
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1200, once: true });
+  </script>
+</body>
+</html>
