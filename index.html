@@ -40,19 +40,8 @@
       font-size: 1.4rem;
       font-weight: 500;
     }
-    .menu-toggle {
-      background: #000;
-      border: none;
-      font-size: 1.3rem;
-      color: white;
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      z-index: 1100;
-      padding: 0.3rem 0.7rem;
-      border-radius: 0.5rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      transition: all 0.3s ease;
+    .menu-toggle{
+      display: none;
     }
     nav {
       background: #1f2937;
@@ -83,6 +72,49 @@
       border-radius: 14px;
       box-shadow: 0 6px 25px rgba(0,0,0,0.08);
     }
+    .project-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+}
+.project-card {
+  background: #f9fafb;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.project-content {
+  padding: 1.5rem;
+}
+.project-content h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: #1f2937;
+}
+.project-content p {
+  margin: 0.4rem 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.project-buttons {
+  margin-top: 1rem;
+}
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
     h2 {
       color: #1f2937;
       border-bottom: 2px solid #e5e7eb;
@@ -172,6 +204,20 @@
         position: sticky;
         top: 0;
       }
+      .menu-toggle {
+      background: #000;
+      border: none;
+      font-size: 1.3rem;
+      color: white;
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 1100;
+      padding: 0.3rem 0.7rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
       nav {
         display: none;
         flex-direction: column;
@@ -179,7 +225,7 @@
         top: 0;
         right: 0;
         width: 60%;
-        height: 44%;
+        height: 50%;
         background: #1f2937;
         z-index: 1050;
         align-items: center;
@@ -193,7 +239,7 @@
         display: flex;
       }
       nav a {
-        margin: 1rem 0;
+        margin: 0.7rem 0;
       }
       section {
         margin: 5rem 1rem 1rem;
@@ -263,25 +309,52 @@
     </div>
   </section>
 
-  <section id="projects" class="fade-in">
-    <h2>Projects</h2>
-    <ul class="timeline">
-      <li data-aos="fade-up">
-        <strong>Reverse Proxy Tunneling Tool:</strong> Built a Python-based Ngrok alternative using Flask to expose local servers with custom domain tunneling.
+  <section id="projects" data-aos="fade-up">
+  <h2>🚀 Projects</h2>
+  <div class="project-grid">
+    
+    <div class="project-card">
+      <img src="https://via.placeholder.com/400x200" alt="Project 1 Screenshot">
+      <div class="project-content">
+        <h3>Reverse Tunnel Server</h3>
+        <p>A full-fledged tunnel server like Ngrok. Features subdomains, route forwarding, and authentication using Flask & WebSockets.</p>
+        <p><strong>Tech:</strong> Python, Flask, WebSockets, Railway</p>
         <div class="project-buttons">
-          <a href="#" class="btn">🔗 GitHub</a>
-          <a href="#" class="btn">🌐 Live Demo</a>
+          <a href="#" class="btn">🔗 Live Demo</a>
+          <a href="#" class="btn">📂 GitHub</a>
         </div>
-      </li>
-      <li data-aos="fade-up">
-        <strong>Portfolio & Web Apps:</strong> Designed modern, responsive websites with frontend-backend integration using HTML, CSS, JS, PHP & MySQL.
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="https://via.placeholder.com/400x200" alt="Project 2 Screenshot">
+      <div class="project-content">
+        <h3>DropX - Offline File Sharing</h3>
+        <p>Android app for fast offline file transfers via Wi-Fi and hotspot. Supports multiple files, history, QR pairing.</p>
+        <p><strong>Tech:</strong> Java, Android SDK, Wi-Fi Direct</p>
         <div class="project-buttons">
-          <a href="#" class="btn">🔗 GitHub</a>
-          <a href="#" class="btn">🌐 Live Demo</a>
+          <a href="#" class="btn">🔗 Live Demo</a>
+          <a href="#" class="btn">📂 GitHub</a>
         </div>
-      </li>
-    </ul>
-  </section>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="https://via.placeholder.com/400x200" alt="Project 3 Screenshot">
+      <div class="project-content">
+        <h3>LectureGist - AI Snippet Generator</h3>
+        <p>AI-powered web app that extracts definitions, examples, and summaries from lecture audio using Whisper and GPT-2.</p>
+        <p><strong>Tech:</strong> Flask, React, Tailwind, Whisper, GPT-2</p>
+        <div class="project-buttons">
+          <a href="#" class="btn">🔗 Live Demo</a>
+          <a href="#" class="btn">📂 GitHub</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
   <section id="certifications" class="fade-in">
     <h2>Certifications</h2>
