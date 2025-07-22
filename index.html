@@ -1,413 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Bharat Poojari - BCA Student, Developer Portfolio with projects like reverse tunnel, DropX, full-stack apps and certifications.">
-  <title>Bharat Poojari - Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(180deg, #f0f4f8 0%, #ffffff 100%);
-      color: #333;
-      scroll-behavior: smooth;
-    }
-    header {
-      background: #2d2d2d;
-      color: white;
-      padding: 4rem 1rem 2rem;
-      text-align: center;
-      position: relative;
-    }
-    header img {
-      width: 120px;
-      border-radius: 50%;
-      margin-bottom: 1rem;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 3.5rem;
-    }
-    header p {
-      margin-top: 1rem;
-      font-size: 1.4rem;
-      font-weight: 500;
-    }
-    .menu-toggle{
-      display: none;
-    }
-    nav {
-      background: #1f2937;
-      padding: 1rem;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      width: 100%;
-      z-index: 1050;
-    }
-    nav a {
-      color: white;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-    nav a:hover,
-    nav a.active {
-      color: #60a5fa;
-      border-bottom: 2px solid #60a5fa;
-    }
-    section {
-      max-width: 1000px;
-      margin: 6rem auto 2rem;
-      padding: 2.5rem;
-      background: white;
-      border-radius: 14px;
-      box-shadow: 0 6px 25px rgba(0,0,0,0.08);
-    }
-    .project-grid {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: 1fr 1fr;
-}
-.project-card {
-  background: #f9fafb;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
-}
-.project-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-.project-content {
-  padding: 1.5rem;
-}
-.project-content h3 {
-  margin-top: 0;
-  font-size: 1.4rem;
-  color: #1f2937;
-}
-.project-content p {
-  margin: 0.4rem 0;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-.project-buttons {
-  margin-top: 1rem;
-}
-@media (max-width: 768px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Bharat Poojari - BCA Student, Developer Portfolio with projects like reverse tunnel, DropX, full-stack apps and certifications.">
+    <title>Bharat Poojari - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="Style.css">
+    <script type="text/javascript" src="Script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="gradient-name">Bharat Poojari</h1>
+      <p id="typewriter-text" style="font-size: 1.4rem; font-weight: 500; min-height: 1.8rem;"></p>
+    </header>
 
-    h2 {
-      color: #1f2937;
-      border-bottom: 2px solid #e5e7eb;
-      padding-bottom: 0.6rem;
-      margin-bottom: 1.5rem;
-    }
-    ul {
-      padding-left: 1.5rem;
-    }
-    footer {
-      text-align: center;
-      padding: 1.2rem;
-      background: #1f2937;
-      color: white;
-      margin-top: 3rem;
-    }
-    .skills span {
-      display: inline-block;
-      background: #e0f2fe;
-      color: #0369a1;
-      margin: 0.4rem;
-      padding: 0.5rem 1.2rem;
-      border-radius: 8px;
-      font-size: 1rem;
-      transition: all 0.3s;
-    }
-    .skills span:hover {
-      transform: scale(1.08);
-      background: #bae6fd;
-    }
-    .fade-in {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .timeline {
-      border-left: 3px solid #3b82f6;
-      margin-left: 1.5rem;
-      padding-left: 1.5rem;
-    }
-    .timeline li {
-      margin-bottom: 2rem;
-      position: relative;
-    }
-    .timeline li::before {
-      content: '';
-      position: absolute;
-      left: -1.4rem;
-      top: 0.4rem;
-      width: 0.9rem;
-      height: 0.9rem;
-      background: #3b82f6;
-      border-radius: 50%;
-    }
-    .btn {
-      display: inline-block;
-      padding: 0.6rem 1.5rem;
-      background: linear-gradient(135deg, #3b82f6, #60a5fa);
-      color: white;
-      border-radius: 12px;
-      text-decoration: none;
-      margin: 0.5rem 0.5rem 0 0;
-      transition: all 0.4s;
-      font-weight: 600;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    }
-    .btn:hover {
-      transform: scale(1.08);
-      background: linear-gradient(135deg, #2563eb, #3b82f6);
-    }
-    .project-buttons {
-      margin-top: 0.5rem;
-    }
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2.2rem;
-      }
-      header p {
-        font-size: 1.1rem;
-      }
-      .menu-toggle {
-        display: block;
-        position: sticky;
-        top: 0;
-      }
-      .menu-toggle {
-      background: #000;
-      border: none;
-      font-size: 1.3rem;
-      color: white;
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      z-index: 1100;
-      padding: 0.3rem 0.7rem;
-      border-radius: 0.5rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      transition: all 0.3s ease;
-    }
-      nav {
-        display: none;
-        flex-direction: column;
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 60%;
-        height: 37%;
-        background: #1f2937;
-        overflow-y: auto;
-        z-index: 1050;
-        align-items: center;
-        padding-top: 2rem;
-        border-top-left-radius: 12px;
-        border-bottom-left-radius: 12px;
-        box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease-in-out;
-      }
-      nav.active {
-        display: flex;
-      }
-      nav a {
-        margin: 0.7rem 0;
-      }
-      section {
-        margin: 5rem 1rem 1rem;
-        padding: 1.5rem;
-      }
-      .btn {
-        font-size: 0.9rem;
-        padding: 0.5rem 1.2rem;
-      }
-    }
-  </style>
-</head>
-<body>
-  <button class="menu-toggle" aria-label="Toggle navigation menu" onclick="toggleMenu()">☰</button>
-  <header>
-    <h1>Bharat Poojari</h1>
-    <p>BCA Student | Creative Developer & Tech Explorer</p>
-  </header>
+    <button class="menu-toggle" aria-label="Toggle navigation menu" onclick="toggleMenu()">☰</button>
 
-  <nav>
-    <a href="#about" onclick="closeMenu()">About</a>
-    <a href="#skills" onclick="closeMenu()">Skills</a>
-    <a href="#projects" onclick="closeMenu()">Projects</a>
-    <a href="#certifications" onclick="closeMenu()">Certifications</a>
-    <a href="#education" onclick="closeMenu()">Education</a>
-    <a href="#contact" onclick="closeMenu()">Contact</a>
-  </nav>
+    <nav id="mobileNav">
+      <a href="#about" onclick="closeMenu()">About</a>
+      <a href="#skills" onclick="closeMenu()">Skills</a>
+      <a href="#projects" onclick="closeMenu()">Projects</a>
+      <a href="#certifications" onclick="closeMenu()">Certifications</a>
+      <a href="#education" onclick="closeMenu()">Education</a>
+      <a href="#contact" onclick="closeMenu()">Contact</a>
+    </nav>
 
-  <!-- content continues unchanged -->
+    <!--About Section-->
 
-  <script>
-    // Mobile menu toggle stays fixed while scrolling
-    window.addEventListener('scroll', () => {
-      const toggle = document.querySelector('.menu-toggle');
-      toggle.style.position = 'fixed';
-      toggle.style.top = '1rem';
-    });
+    <section id="about" class="fade-in">
+      <h2>About Me</h2>
+      <p>Hello! I’m <strong>Bharat Poojari</strong>, a passionate BCA student with a strong interest in full-stack development, open-source contributions, and building useful software tools. I specialize in projects that combine backend logic with beautiful user interfaces. My goal is to solve real-world problems using clean code, creativity, and modern technologies.</p>
+    <p>With experience in Python, Java, C++, HTML, CSS, JavaScript, and MySQL, I have worked on several exciting projects like <strong>DropX</strong> (offline file sharing), <strong>LectureGist</strong> (AI-powered snippet extractor), and a reverse tunnel similar to Ngrok.</p>
+    <p>I'm always exploring new technologies and improving my skills to build impactful and scalable solutions.</p>
+      <a href="resumes.pdf" download class="btn">📄 Download Resume</a>
+    </section>
 
-    function toggleMenu() {
-      document.querySelector('nav').classList.toggle('active');
-    }
+    <!--Skills Section-->
 
-    function closeMenu() {
-      if (window.innerWidth <= 768) {
-        document.querySelector('nav').classList.remove('active');
-      }
-    }
-  </script>
+    <section id="skills" data-aos="fade-up" data-aos-delay="100">
+      <h2>Skills</h2>
+      <div class="skills-container">
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />
+          <span>HTML</span>
+          <div class="bar"><div class="bar-fill" data-level="95%"></div></div>
+        </div>
 
-  <section id="about" class="fade-in">
-    <h2>About Me</h2>
-    <p>I’m a 5th semester BCA student from J.M.J BCA College, Chipgi with a CGPA of 8.85. I’m passionate about full-stack development, reverse engineering, and system design. I’ve created tunneling tools like Ngrok, responsive websites, and backend systems. I am constantly learning and enjoy building solutions with real-world impact.</p>
-    <a href="resumes.pdf" download class="btn">📄 Download Resume</a>
-  </section>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
+          <span>CSS</span>
+          <div class="bar"><div class="bar-fill" data-level="90%"></div></div>
+        </div>
 
-  <section id="skills" class="fade-in">
-    <h2>Technical Skills</h2>
-    <div class="skills">
-      <span><i class="devicon-java-plain colored"></i> Java</span>
-      <span><i class="devicon-c-plain colored"></i> C</span>
-      <span><i class="devicon-python-plain colored"></i> Python</span>
-      <span><i class="devicon-html5-plain colored"></i> HTML</span>
-      <span><i class="devicon-css3-plain colored"></i> CSS</span>
-      <span><i class="devicon-javascript-plain colored"></i> JavaScript</span>
-      <span><i class="devicon-php-plain colored"></i> PHP</span>
-      <span><i class="devicon-mysql-plain colored"></i> MySQL</span>
-    </div>
-  </section>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+          <span>JavaScript</span>
+          <div class="bar"><div class="bar-fill" data-level="70%"></div></div>
+        </div>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" />
+          <span>Flask</span>
+          <div class="bar"><div class="bar-fill" data-level="40%"></div></div>
+        </div>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="JavaScript" />
+          <span>MySQL</span>
+          <div class="bar"><div class="bar-fill" data-level="90%"></div></div>
+        </div>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+          <span>Python</span>
+          <div class="bar"><div class="bar-fill" data-level="85%"></div></div>
+        </div>
 
-  <section id="projects" data-aos="fade-up">
-  <h2>🚀 Projects</h2>
-  <div class="project-grid">
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" />
+          <span>C++</span>
+          <div class="bar"><div class="bar-fill" data-level="45%"></div></div>
+        </div>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
+          <span>Java</span>
+          <div class="bar"><div class="bar-fill" data-level="55%"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!--Projects section-->
+    <section id="projects" data-aos="fade-up" data-aos-delay="100">
+      <h2>🚀 Projects</h2>
+      <div class="project-grid">
     
-    <div class="project-card">
-      <img src="https://via.placeholder.com/400x200" alt="Project 1 Screenshot">
-      <div class="project-content">
-        <h3>Reverse Tunnel Server</h3>
-        <p>A full-fledged tunnel server like Ngrok. Features subdomains, route forwarding, and authentication using Flask & WebSockets.</p>
-        <p><strong>Tech:</strong> Python, Flask, WebSockets, Railway</p>
-        <div class="project-buttons">
-          <a href="#" class="btn">🔗 Live Demo</a>
-          <a href="#" class="btn">📂 GitHub</a>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/400x200" alt="Project 1 Screenshot">
+          <div class="project-content">
+            <h3>Reverse Tunnel Server</h3>
+            <p>A full-fledged tunnel server like Ngrok. Features subdomains, route forwarding, and authentication using Flask & WebSockets.</p>
+            <p><strong>Tech:</strong> Python, Flask, WebSockets, Railway</p>
+            <div class="project-buttons">
+              <a href="#" class="btn">🔗 Live Demo</a>
+              <a href="#" class="btn">📂 GitHub</a>
+            </div>
+          </div>
         </div>
+
+        <div class="project-card">
+          <img src="https://via.placeholder.com/400x200" alt="Project 2 Screenshot">
+          <div class="project-content">
+            <h3>DropX - Offline File Sharing</h3>
+            <p>Android app for fast offline file transfers via Wi-Fi and hotspot. Supports multiple files, history, QR pairing.</p>
+            <p><strong>Tech:</strong> Java, Android SDK, Wi-Fi Direct</p>
+            <div class="project-buttons">
+              <a href="#" class="btn">🔗 Live Demo</a>
+              <a href="#" class="btn">📂 GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="https://via.placeholder.com/400x200" alt="Project 3 Screenshot">
+          <div class="project-content">
+            <h3>LectureGist - AI Snippet Generator</h3>
+            <p>AI-powered web app that extracts definitions, examples, and summaries from lecture audio using Whisper and GPT-2.</p>
+            <p><strong>Tech:</strong> Flask, React, Tailwind, Whisper, GPT-2</p>
+            <div class="project-buttons">
+              <a href="#" class="btn">🔗 Live Demo</a>
+              <a href="#" class="btn">📂 GitHub</a>
+            </div>
+          </div>
+        </div>
+
       </div>
+    </section>
+
+    <!--Certification  Section-->
+
+    <section id="certifications" data-aos="fade-up" data-aos-delay="100">
+      <h2>🏅 Certifications</h2>
+          <div class="cert-grid">
+
+        <div class="cert-card">
+          <img src="Frontend Developer.png" height="50%" alt="Frontend Developer Cert" onclick="openLightbox(this.src)">
+          <div class="cert-info">
+            <h3>Frontend Developer</h3>
+            <p><strong>Provider:</strong> SIDH & Reliance Foundation Skilling Academy</p>
+            <p><strong>Issued:</strong> July 2025</p>
+            <a href="Frontend Developer Sidh.pdf" class="btn" target="_blank">📄 View Online</a>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <img src="IoT-Network-specialist.png" height="50%" alt="Iot-Network Specialist" onclick="openLightbox(this.src)">
+          <div class="cert-info">
+            <h3>IoT-Network-specialist</h3>
+            <p><strong>Provider:</strong> SIDH & Reliance Foundation Skilling Academy</p>
+            <p><strong>Issued:</strong> July 2025</p>
+            <a href="IoT Network Specialist  SIDH.pdf" class="btn" target="_blank">📄 View Online</a>
+          </div>
+        </div>
+
+        <div class="cert-card" >
+          <img src="https://via.placeholder.com/400x200" height="50%" alt="AI Cert" onclick="openLightbox(this.src)">
+          <div class="cert-info">
+            <h3>AI Fundamentals</h3>
+            <p><strong>Provider:</strong> Google</p>
+            <p><strong>Issued:</strong> Apr 2024</p>
+            <a href="#" class="btn" target="_blank">📄 View Online</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" onclick="closeLightbox()">
+      <img id="lightbox-img" src="" alt="Full View">
     </div>
 
-    <div class="project-card">
-      <img src="https://via.placeholder.com/400x200" alt="Project 2 Screenshot">
-      <div class="project-content">
-        <h3>DropX - Offline File Sharing</h3>
-        <p>Android app for fast offline file transfers via Wi-Fi and hotspot. Supports multiple files, history, QR pairing.</p>
-        <p><strong>Tech:</strong> Java, Android SDK, Wi-Fi Direct</p>
-        <div class="project-buttons">
-          <a href="#" class="btn">🔗 Live Demo</a>
-          <a href="#" class="btn">📂 GitHub</a>
-        </div>
-      </div>
-    </div>
+    <!--Education Section-->
+    <section id="education" data-aos="fade-up">
+    <h2>Education</h2>
+    <ul class="timeline">
+      <li>
+        <h3>Bachelor of Computer Applications (BCA)</h3>
+        <p><strong>J.M.J BCA Degree College, Chipgi</strong><br>
+        Affiliated to Karnataka University, Dharwad</p>
+        <p>2025 – Present | CGPA: <strong>8.85 / 10</strong></p>
+        <a href="bca-certificate.pdf" class="btn" target="_blank">Download Certificate</a>
+      </li>
+      <li>
+        <h3>Pre-University Education (PUC)</h3>
+        <p><strong>Shree Marikamba Govt PU College, Sirsi</strong></p>
+        <p>2019 – 2021 | Percentage: <strong>87.3%</strong></p>
+        <a href="puc-certificate.pdf" class="btn" target="_blank">Download Certificate</a>
+      </li>
+      <li>
+        <h3>SSLC</h3>
+        <p><strong>Surya Narayana High School ,Bisalakoppa, Sirsi</strong></p>
+        <p>2018 – 2019 | Percentage: <strong>93%</strong></p>
+        <a href="sslc-certificate.pdf" class="btn" target="_blank">Download Certificate</a>
+      </li>
+    </ul>
+  </section>
 
-    <div class="project-card">
-      <img src="https://via.placeholder.com/400x200" alt="Project 3 Screenshot">
-      <div class="project-content">
-        <h3>LectureGist - AI Snippet Generator</h3>
-        <p>AI-powered web app that extracts definitions, examples, and summaries from lecture audio using Whisper and GPT-2.</p>
-        <p><strong>Tech:</strong> Flask, React, Tailwind, Whisper, GPT-2</p>
-        <div class="project-buttons">
-          <a href="#" class="btn">🔗 Live Demo</a>
-          <a href="#" class="btn">📂 GitHub</a>
-        </div>
-      </div>
-    </div>
-
+    <!--Contact Section-->
+    <section id="contact" data-aos="fade-up">
+  <h2>Contact</h2>
+  <div style="display: flex; flex-direction: column; gap: 1.2rem; font-size: 1.1rem;">
+    <div><i class="devicon-github-original colored"></i> GitHub: <a href="https://github.com/bharat0316-a" target="_blank">github.com/bharat0316-a</a></div>
+    <div><i class="devicon-linkedin-plain colored"></i> LinkedIn: <a href="https://www.linkedin.com/in/bharat-poojari-397618359" target="_blank">www.linkedin.com/in/bharat-poojari-397618359</a></div>
+    <div><i class="devicon-google-plain colored"></i> Mail: <a href="mailto:bharatp0316@gmail.com">your.email@example.com</a></div>
+    <div><i class="devicon-phonegap-plain colored"></i>📞 Phone: <a href="tel:+918073750997">+91 80737 50997</a></div>
+    <div><i class="devicon-googlemaps-plain colored"></i>📍 Location: Sirsi, Karnataka, India</div>
   </div>
 </section>
 
-
-  <section id="certifications" class="fade-in">
-    <h2>Certifications</h2>
-    <ul>
-      <li>IoT Network Specialist – Skill India Hub (Reliance Foundation)</li>
-      <li>Front-End Development – Skill India Hub (Reliance Foundation)</li>
-    </ul>
-  </section>
-
-  <section id="education" class="fade-in">
-    <h2>Education</h2>
-    <ul>
-      <li><strong>BCA</strong> – J.M.J BCA College, Chipgi | 5th Semester | CGPA: 8.85</li>
-      <li><strong>PUC</strong> – Sridevi PU College, Sirsi | 88.33%</li>
-      <li><strong>SSLC</strong> – SuryaNarayan High School, Bisalakoppa | 93.76%</li>
-    </ul>
-  </section>
-
-  <section id="contact" class="fade-in">
-    <h2>Contact</h2>
-    <p><strong>📍 Address:</strong> Vidyanagar Yekkambi, Bisalakoppa, Post: Yekkambi, Sirsi, Uttara Kannada, Karnataka - 581358</p>
-    <p><strong>📞 Phone:</strong> 8073750997</p>
-    <p><strong>✉️ Email:</strong> bharat0132@outlook.com</p>
-    <p><strong>🌐 GitHub:</strong> <a href="https://github.com/bharat0316-a">github.com/bharat0316</a></p>
-    <p><strong>💼 LinkedIn:</strong> <a href="https://www.linkedin.com/in/bharat-poojari-397618359">linkedin.com/in/Bharat-Poojari</a></p>
-    <p><strong>Languages:</strong> Kannada, English, Hindi</p>
-  </section>
-
-  <footer>
-    &copy; 2025 Bharat Poojari. All rights reserved.
-  </footer>
-
-  <script>
-    const faders = document.querySelectorAll('.fade-in');
-    const appearOptions = {
-      threshold: 0.1,
-      rootMargin: "0px 0px -100px 0px"
-    };
-    const appearOnScroll = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
+    <footer>
+      &copy; 2025 Bharat Poojari. All rights reserved.
+    </footer>
+    <!--Onpage Scripts-->
+    <script>
+      const faders = document.querySelectorAll('.fade-in');
+      const appearOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -100px 0px"
+      };
+      const appearOnScroll = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        });
+      }, appearOptions);
+      faders.forEach(fader => {
+        appearOnScroll.observe(fader);
       });
-    }, appearOptions);
-    faders.forEach(fader => {
-      appearOnScroll.observe(fader);
-    });
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1200, once: true });
-  </script>
-</body>
+    </script>
+    <script>
+      AOS.init({ duration: 1200, once: true });
+    </script>
+  </body>
 </html>
