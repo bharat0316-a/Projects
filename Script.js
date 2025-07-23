@@ -1,25 +1,3 @@
-
-//Typewriter function
-const roles = ["BCA Student", "Creative Developer", "Tech Explorer"];
-let i = 0, j = 0, current = '', isDeleting = false;
-
-function typeWriter() {
-  current = roles[i];
-  document.getElementById("typewriter-text").textContent = current.slice(0, j);
-
-  if (!isDeleting && j < current.length) {
-    j++;
-  } else if (isDeleting && j > 0) {
-    j--;
-  } else {
-    isDeleting = !isDeleting;
-    if (!isDeleting) i = (i + 1) % roles.length;
-  }
-
-  setTimeout(typeWriter, isDeleting ? 40 : 120);
-}
-
-window.onload = typeWriter;
 //Theme label
  function toggleText() {
       const toggle = document.getElementById("themeToggle");
