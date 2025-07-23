@@ -84,3 +84,41 @@ window.addEventListener('scroll', () => {
   toggle.style.top = '1rem';
 });
   
+//SSLC Markscard PDF Iframe
+function OsslcPDF(){
+  document.getElementById('sslcmsheet').style.display = 'flex';
+}
+function CsslcPDF() {
+  document.getElementById('sslcmsheet').style.display = 'none';
+}
+
+//PUC Markscard PDF Iframe
+function OpucPDF(){
+  document.getElementById('pucmsheet').style.display = 'flex';
+}
+function CpucPDF() {
+  document.getElementById('pucmsheet').style.display = 'none';
+}
+
+//BCA Markscard PDF Iframe
+function ObcaPDF(){
+  document.getElementById('bcamsheet').style.display = 'flex';
+}
+function CbcaPDF() {
+  document.getElementById('bcamsheet').style.display = 'none';
+}
+
+//Frontend developer certificate pdf iframe
+function OfrontendPDF(){
+  document.getElementById('frontendcert').style.display = 'flex';
+}
+function CfrontendPDF() {
+  document.getElementById('frontendcert').style.display = 'none';
+}
+//Iot certificate pdf iframe
+function OiotPDF(){
+  document.getElementById('iotcert').style.display = 'flex';
+}
+function CiotPDF() {
+  document.getElementById('iotcert').style.display = 'none';
+}

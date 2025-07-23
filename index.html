@@ -14,39 +14,66 @@
   </head>
   <body>
     <header>
-      <!--Theme changing button-->
-    <label class="theme-switch">
-      <label for="themeToggle" id="ld">Day</label>
-      <input type="checkbox" class="theme-switch__checkbox" id="themeToggle" onclick="toggleText()">
-      <div class="theme-switch__container">
-        <div class="theme-switch__clouds"></div>
-        <div class="theme-switch__stars-container">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 55" fill="none">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M135.831 3.00688C135.055 3.85027 134.111 4.29946 133 4.35447C134.111 4.40947 135.055 4.85867 135.831 5.71123C136.607 6.55462 136.996 7.56303 136.996 8.72727C136.996 7.95722 137.172 7.25134 137.525 6.59129C137.886 5.93124 138.372 5.39954 138.98 5.00535C139.598 4.60199 140.268 4.39114 141 4.35447C139.88 4.2903 138.936 3.85027 138.16 3.00688C137.384 2.16348 136.996 1.16425 136.996 0C136.996 1.16425 136.607 2.16348 135.831 3.00688ZM31 23.3545C32.1114 23.2995 33.0551 22.8503 33.8313 22.0069C34.6075 21.1635 34.9956 20.1642 34.9956 19C34.9956 20.1642 35.3837 21.1635 36.1599 22.0069C36.9361 22.8503 37.8798 23.2903 39 23.3545C38.2679 23.3911 37.5976 23.602 36.9802 24.0053C36.3716 24.3995 35.8864 24.9312 35.5248 25.5913C35.172 26.2513 34.9956 26.9572 34.9956 27.7273C34.9956 26.563 34.6075 25.5546 33.8313 24.7112C33.0551 23.8587 32.1114 23.4095 31 23.3545ZM0 36.3545C1.11136 36.2995 2.05513 35.8503 2.83131 35.0069C3.6075 34.1635 3.99559 33.1642 3.99559 32C3.99559 33.1642 4.38368 34.1635 5.15987 35.0069C5.93605 35.8503 6.87982 36.2903 8 36.3545C7.26792 36.3911 6.59757 36.602 5.98015 37.0053C5.37155 37.3995 4.88644 37.9312 4.52481 38.5913C4.172 39.2513 3.99559 39.9572 3.99559 40.7273C3.99559 39.563 3.6075 38.5546 2.83131 37.7112C2.05513 36.8587 1.11136 36.4095 0 36.3545ZM56.8313 24.0069C56.0551 24.8503 55.1114 25.2995 54 25.3545C55.1114 25.4095 56.0551 25.8587 56.8313 26.7112C57.6075 27.5546 57.9956 28.563 57.9956 29.7273C57.9956 28.9572 58.172 28.2513 58.5248 27.5913C58.8864 26.9312 59.3716 26.3995 59.9802 26.0053C60.5976 25.602 61.2679 25.3911 62 25.3545C60.8798 25.2903 59.9361 24.8503 59.1599 24.0069C58.3837 23.1635 57.9956 22.1642 57.9956 21C57.9956 22.1642 57.6075 23.1635 56.8313 24.0069ZM81 25.3545C82.1114 25.2995 83.0551 24.8503 83.8313 24.0069C84.6075 23.1635 84.9956 22.1642 84.9956 21C84.9956 22.1642 85.3837 23.1635 86.1599 24.0069C86.9361 24.8503 87.8798 25.2903 89 25.3545C88.2679 25.3911 87.5976 25.602 86.9802 26.0053C86.3716 26.3995 85.8864 26.9312 85.5248 27.5913C85.172 28.2513 84.9956 28.9572 84.9956 29.7273C84.9956 28.563 84.6075 27.5546 83.8313 26.7112C83.0551 25.8587 82.1114 25.4095 81 25.3545ZM136 36.3545C137.111 36.2995 138.055 35.8503 138.831 35.0069C139.607 34.1635 139.996 33.1642 139.996 32C139.996 33.1642 140.384 34.1635 141.16 35.0069C141.936 35.8503 142.88 36.2903 144 36.3545C143.268 36.3911 142.598 36.602 141.98 37.0053C141.372 37.3995 140.886 37.9312 140.525 38.5913C140.172 39.2513 139.996 39.9572 139.996 40.7273C139.996 39.563 139.607 38.5546 138.831 37.7112C138.055 36.8587 137.111 36.4095 136 36.3545ZM101.831 49.0069C101.055 49.8503 100.111 50.2995 99 50.3545C100.111 50.4095 101.055 50.8587 101.831 51.7112C102.607 52.5546 102.996 53.563 102.996 54.7273C102.996 53.9572 103.172 53.2513 103.525 52.5913C103.886 51.9312 104.372 51.3995 104.98 51.0053C105.598 50.602 106.268 50.3911 107 50.3545C105.88 50.2903 104.936 49.8503 104.16 49.0069C103.384 48.1635 102.996 47.1642 102.996 46C102.996 47.1642 102.607 48.1635 101.831 49.0069Z" fill="currentColor"></path>
-          </svg>
-        </div>
-        <div class="theme-switch__circle-container">
-          <div class="theme-switch__sun-moon-container">
-            <div class="theme-switch__moon">
-              <div class="theme-switch__spot"></div>
-              <div class="theme-switch__spot"></div>
-              <div class="theme-switch__spot"></div>
+      <!--Theme changing button--> 
+      <label class="theme-switch">
+        <label for="themeToggle" id="ld">Day</label>
+        <input type="checkbox" class="theme-switch__checkbox" id="themeToggle" onclick="toggleText()">
+        <div class="theme-switch__container">
+          <div class="theme-switch__clouds"></div>
+           <div class="theme-switch__stars-container">
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 55" fill="none">
+               <path fill-rule="evenodd" clip-rule="evenodd" d="M135.831 3.00688C135.055 3.85027 134.111 4.29946 133 4.35447C134.111 4.40947 135.055 4.85867 135.831 5.71123C136.607 6.55462 136.996 7.56303 136.996 8.72727C136.996 7.95722 137.172 7.25134 137.525 6.59129C137.886 5.93124 138.372 5.39954 138.98 5.00535C139.598 4.60199 140.268 4.39114 141 4.35447C139.88 4.2903 138.936 3.85027 138.16 3.00688C137.384 2.16348 136.996 1.16425 136.996 0C136.996 1.16425 136.607 2.16348 135.831 3.00688ZM31 23.3545C32.1114 23.2995 33.0551 22.8503 33.8313 22.0069C34.6075 21.1635 34.9956 20.1642 34.9956 19C34.9956 20.1642 35.3837 21.1635 36.1599 22.0069C36.9361 22.8503 37.8798 23.2903 39 23.3545C38.2679 23.3911 37.5976 23.602 36.9802 24.0053C36.3716 24.3995 35.8864 24.9312 35.5248 25.5913C35.172 26.2513 34.9956 26.9572 34.9956 27.7273C34.9956 26.563 34.6075 25.5546 33.8313 24.7112C33.0551 23.8587 32.1114 23.4095 31 23.3545ZM0 36.3545C1.11136 36.2995 2.05513 35.8503 2.83131 35.0069C3.6075 34.1635 3.99559 33.1642 3.99559 32C3.99559 33.1642 4.38368 34.1635 5.15987 35.0069C5.93605 35.8503 6.87982 36.2903 8 36.3545C7.26792 36.3911 6.59757 36.602 5.98015 37.0053C5.37155 37.3995 4.88644 37.9312 4.52481 38.5913C4.172 39.2513 3.99559 39.9572 3.99559 40.7273C3.99559 39.563 3.6075 38.5546 2.83131 37.7112C2.05513 36.8587 1.11136 36.4095 0 36.3545ZM56.8313 24.0069C56.0551 24.8503 55.1114 25.2995 54 25.3545C55.1114 25.4095 56.0551 25.8587 56.8313 26.7112C57.6075 27.5546 57.9956 28.563 57.9956 29.7273C57.9956 28.9572 58.172 28.2513 58.5248 27.5913C58.8864 26.9312 59.3716 26.3995 59.9802 26.0053C60.5976 25.602 61.2679 25.3911 62 25.3545C60.8798 25.2903 59.9361 24.8503 59.1599 24.0069C58.3837 23.1635 57.9956 22.1642 57.9956 21C57.9956 22.1642 57.6075 23.1635 56.8313 24.0069ZM81 25.3545C82.1114 25.2995 83.0551 24.8503 83.8313 24.0069C84.6075 23.1635 84.9956 22.1642 84.9956 21C84.9956 22.1642 85.3837 23.1635 86.1599 24.0069C86.9361 24.8503 87.8798 25.2903 89 25.3545C88.2679 25.3911 87.5976 25.602 86.9802 26.0053C86.3716 26.3995 85.8864 26.9312 85.5248 27.5913C85.172 28.2513 84.9956 28.9572 84.9956 29.7273C84.9956 28.563 84.6075 27.5546 83.8313 26.7112C83.0551 25.8587 82.1114 25.4095 81 25.3545ZM136 36.3545C137.111 36.2995 138.055 35.8503 138.831 35.0069C139.607 34.1635 139.996 33.1642 139.996 32C139.996 33.1642 140.384 34.1635 141.16 35.0069C141.936 35.8503 142.88 36.2903 144 36.3545C143.268 36.3911 142.598 36.602 141.98 37.0053C141.372 37.3995 140.886 37.9312 140.525 38.5913C140.172 39.2513 139.996 39.9572 139.996 40.7273C139.996 39.563 139.607 38.5546 138.831 37.7112C138.055 36.8587 137.111 36.4095 136 36.3545ZM101.831 49.0069C101.055 49.8503 100.111 50.2995 99 50.3545C100.111 50.4095 101.055 50.8587 101.831 51.7112C102.607 52.5546 102.996 53.563 102.996 54.7273C102.996 53.9572 103.172 53.2513 103.525 52.5913C103.886 51.9312 104.372 51.3995 104.98 51.0053C105.598 50.602 106.268 50.3911 107 50.3545C105.88 50.2903 104.936 49.8503 104.16 49.0069C103.384 48.1635 102.996 47.1642 102.996 46C102.996 47.1642 102.607 48.1635 101.831 49.0069Z" fill="currentColor"></path>
+             </svg>
+           </div>
+           <div class="theme-switch__circle-container">
+            <div class="theme-switch__sun-moon-container">
+              <div class="theme-switch__moon">
+                <div class="theme-switch__spot"></div>
+                <div class="theme-switch__spot"></div>
+                <div class="theme-switch__spot"></div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </label>
+      </label>
       <!--Theme switch end -->
+      <!--mobile menu toffle button-->
+      <button class="menu-toggle" aria-label="Toggle navigation menu" onclick="toggleMenu()">☰</button>
+
       <h1 class="gradient-name">Bharat Poojari</h1>
       <p id="typewriter-text" style="font-size: 1.4rem; font-weight: 500; min-height: 1.8rem;"></p>
     </header>
-    <!--mobile menu toffle button-->
-    <button class="menu-toggle" aria-label="Toggle navigation menu" onclick="toggleMenu()">☰</button>
     <!--Resume Iframe-->
     <div class="resume-modal" id="resumeModal">
       <button onclick="closeResume()" class="btn">Close</button>
       <iframe src="resumes.pdf"></iframe>
     </div>
+    <!--SSLC certificate iframe-->
+    <div class="resume-modal" id="sslcmsheet">
+      <button onclick="CsslcPDF()" class="btn">Close</button>
+      <iframe src="SSLC Marksheet.pdf"></iframe>
+    </div>
+    <!--PUC certificate iframe-->
+    <div class="resume-modal" id="pucmsheet">
+      <button onclick="CpucPDF()" class="btn">Close</button>
+      <iframe src="PUC Marksheet.pdf"></iframe>
+    </div>
+    <!--BCA certificate iframe-->
+    <div class="resume-modal" id="bcamsheet">
+      <button onclick="CbcaPDF()" class="btn">Close</button>
+      <iframe src="BCA Marksheet.pdf"></iframe>
+    </div>
+    <!--Frontend Developer certificate iframe-->
+    <div class="resume-modal" id="frontendcert">
+      <button onclick="CfrontendPDF()" class="btn">Close</button>
+      <iframe src="Frontend Developer Sidh.pdf"></iframe>
+    </div>
+    <!--IoT Network certificate iframe-->
+    <div class="resume-modal" id="iotcert">
+      <button onclick="CiotPDF()" class="btn">Close</button>
+      <iframe src="IoT-network-specialist.pdf"></iframe>
+    </div>
+    
     <!--end resume Iframe-->
     <nav id="mobileNav">
       <a href="#about" onclick="closeMenu()">About</a>
@@ -124,40 +151,40 @@
       <div class="project-grid">
     
         <div class="project-card">
-          <img src="https://via.placeholder.com/400x200" alt="Project 1 Screenshot">
+          <img src="https://via.placeholder.com/400x200" alt="Project 1 Screenshot" style="display: none;">
           <div class="project-content">
             <h3>Reverse Tunnel Server</h3>
             <p>A full-fledged tunnel server like Ngrok. Features subdomains, route forwarding, and authentication using Flask & WebSockets.</p>
             <p><strong>Tech:</strong> Python, Flask, WebSockets, Railway</p>
             <div class="project-buttons">
               <a href="#" class="btn">🔗 Live Demo</a>
-              <a href="#" class="btn">📂 GitHub</a>
+              <a href="https://github.com/bharat0316-a" class="btn">📂 GitHub</a>
             </div>
           </div>
         </div>
 
         <div class="project-card">
-          <img src="https://via.placeholder.com/400x200" alt="Project 2 Screenshot">
+          <img src="https://via.placeholder.com/400x200" alt="Project 2 Screenshot" style="display: none;">
           <div class="project-content">
             <h3>DropX - Offline File Sharing</h3>
             <p>Android app for fast offline file transfers via Wi-Fi and hotspot. Supports multiple files, history, QR pairing.</p>
             <p><strong>Tech:</strong> Java, Android SDK, Wi-Fi Direct</p>
             <div class="project-buttons">
               <a href="#" class="btn">🔗 Live Demo</a>
-              <a href="#" class="btn">📂 GitHub</a>
+              <a href="https://github.com/bharat0316-a" class="btn">📂 GitHub</a>
             </div>
           </div>
         </div>
 
         <div class="project-card">
-          <img src="https://via.placeholder.com/400x200" alt="Project 3 Screenshot">
+          <img src="https://via.placeholder.com/400x200" alt="Project 3 Screenshot" style="display: none;">
           <div class="project-content">
             <h3>LectureGist - AI Snippet Generator</h3>
             <p>AI-powered web app that extracts definitions, examples, and summaries from lecture audio using Whisper and GPT-2.</p>
             <p><strong>Tech:</strong> Flask, React, Tailwind, Whisper, GPT-2</p>
             <div class="project-buttons">
               <a href="#" class="btn">🔗 Live Demo</a>
-              <a href="#" class="btn">📂 GitHub</a>
+              <a href="https://github.com/bharat0316-a" class="btn">📂 GitHub</a>
             </div>
           </div>
         </div>
@@ -174,19 +201,19 @@
           <p><strong>J.M.J BCA Degree College, Chipgi</strong><br>
           Affiliated to Karnataka University, Dharwad</p>
           <p>2025 – Present | CGPA: <strong>8.85 / 10</strong></p>
-          <a href="bca-certificate.pdf" class="btn" target="_blank">Download Certificate</a>
+          <a href="javascript:void(0)" onclick="ObcaPDF()" class="btn">📄 Marksheet</a>
         </li>
         <li>
           <h3>Pre-University Education (PUC)</h3>
           <p><strong>Shree Marikamba Govt PU College, Sirsi</strong></p>
           <p>2019 – 2021 | Percentage: <strong>87.3%</strong></p>
-          <a href="puc-certificate.pdf" class="btn" target="_blank">Download Certificate</a>
+          <a href="javascript:void(0)" onclick="OpucPDF()" class="btn">📄 Marksheet</a>
         </li>
         <li>
           <h3>SSLC</h3>
           <p><strong>Surya Narayana High School ,Bisalakoppa, Sirsi</strong></p>
           <p>2018 – 2019 | Percentage: <strong>93%</strong></p>
-          <a href="sslc-certificate.pdf" class="btn" target="_blank">Download Certificate</a>
+          <a href="javascript:void(0)" onclick="OsslcPDF()" class="btn">📄 Marksheet</a>
         </li>
       </ul>
     </section>
@@ -203,7 +230,7 @@
             <h3>Frontend Developer</h3>
             <p><strong>Provider:</strong> SIDH & Reliance Foundation Skilling Academy</p>
             <p><strong>Issued:</strong> July 2025</p>
-            <a href="Frontend Developer Sidh.pdf" class="btn" target="_blank">📄 View Online</a>
+            <a href="javascript:void(0)" onclick="OfrontendPDF()" class="btn">View PDF</a>
           </div>
         </div>
 
@@ -213,20 +240,9 @@
             <h3>IoT-Network-specialist</h3>
             <p><strong>Provider:</strong> SIDH & Reliance Foundation Skilling Academy</p>
             <p><strong>Issued:</strong> July 2025</p>
-            <a href="IoT Network Specialist  SIDH.pdf" class="btn" target="_blank">📄 View Online</a>
+            <a href="javascript:void(0)" onclick="OiotPDF()" class="btn">View PDF</a>
           </div>
         </div>
-
-        <div class="cert-card" >
-          <img src="https://via.placeholder.com/400x200" height="50%" alt="AI Cert" onclick="openLightbox(this.src)">
-          <div class="cert-info">
-            <h3>AI Fundamentals</h3>
-            <p><strong>Provider:</strong> Google</p>
-            <p><strong>Issued:</strong> Apr 2024</p>
-            <a href="#" class="btn" target="_blank">📄 View Online</a>
-          </div>
-        </div>
-
       </div>
     </section>
 
@@ -241,74 +257,74 @@
       <div style="display: flex; flex-direction: column; gap: 1.2rem; font-size: 1.1rem;">
         <div>
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 
-      5.47 7.59.4.07.55-.17.55-.38 
-      0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
-      -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78
-      -.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 
-      0 0 .67-.21 2.2.82A7.65 7.65 0 0 1 8 4.8c.68 0 1.36.09 
-      2 .26 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 
-      1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 
-      1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 
-      8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-  </svg>
-          GitHub: <a href="https://github.com/bharat0316-a" target="_blank">github.com/bharat0316-a</a></div>
-        
-        
-          <div>
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 
+              5.47 7.59.4.07.55-.17.55-.38 
+              0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
+              -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78
+              -.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 
+              0 0 .67-.21 2.2.82A7.65 7.65 0 0 1 8 4.8c.68 0 1.36.09 
+              2 .26 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 
+              1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 
+              1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 
+              8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+          </svg>
+          GitHub: <a href="https://github.com/bharat0316-a" target="_blank">github.com/bharat0316-a</a>
+        </div>
+        <div>
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 
-      0 16 .513 16 1.146v13.708c0 .633-.526 
-      1.146-1.175 1.146H1.175C.526 16 0 
-      15.487 0 14.854V1.146zM4.943 13.569V6.169H2.542v7.4h2.401zm-1.2-8.41c.837 
-      0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.341-1.248-.822 
-      0-1.358.54-1.358 1.248 0 .694.52 1.248 1.326 
-      1.248h.015zm4.908 8.41V9.359c0-.223.016-.446.082-.605.18-.446.59-.909 
-      1.278-.909.902 0 1.263.686 1.263 1.692v4.032h2.401V9.3c0-2.29-1.225-3.354-2.857-3.354-1.312 
-      0-1.89.729-2.217 1.24v.034h-.016a5.4 5.4 0 
-      0 1 .016-.034V6.169H6.542c.03.729 0 7.4 0 
-      7.4h2.401z"/>
-  </svg>
-        LinkedIn: <a href="https://www.linkedin.com/in/bharat-poojari-397618359" target="_blank">www.linkedin.com/in/bharat-poojari-397618359</a></div>
+            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 
+            0 16 .513 16 1.146v13.708c0 .633-.526 
+            1.146-1.175 1.146H1.175C.526 16 0 
+            15.487 0 14.854V1.146zM4.943 13.569V6.169H2.542v7.4h2.401zm-1.2-8.41c.837 
+            0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.341-1.248-.822 
+            0-1.358.54-1.358 1.248 0 .694.52 1.248 1.326 
+            1.248h.015zm4.908 8.41V9.359c0-.223.016-.446.082-.605.18-.446.59-.909 
+            1.278-.909.902 0 1.263.686 1.263 1.692v4.032h2.401V9.3c0-2.29-1.225-3.354-2.857-3.354-1.312 
+            0-1.89.729-2.217 1.24v.034h-.016a5.4 5.4 0 
+            0 1 .016-.034V6.169H6.542c.03.729 0 7.4 0 
+            7.4h2.401z"/>
+          </svg>
+          LinkedIn: <a href="https://www.linkedin.com/in/bharat-poojari-397618359" target="_blank">www.linkedin.com/in/bharat-poojari-397618359</a>
+        </div>
         
         
         <div>
-  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512">
-    <path fill="#EA4335" d="M502.3 190.8L327.4 338.6 502.3 482c6.1-5.1 9.7-12.6 
-      9.7-20.7V211.6c0-8.2-3.6-15.6-9.7-20.8z"/>
-    <path fill="#34A853" d="M10 190.8c-6.1 5.2-9.7 12.6-9.7 20.8v249.7c0 8.1 
-      3.6 15.6 9.7 20.7l174.9-143.4L10 190.8z"/>
-    <path fill="#FBBC04" d="M502.3 91.2c0-16.6-13.4-30-30-30H39.7c-16.6 
-      0-30 13.4-30 30v99.6L256 342.1l246.3-151.3V91.2z"/>
-    <path fill="#4285F4" d="M327.4 338.6L256 388.8l-71.4-50.2L10 482c5.4 
-      4.5 12.3 7.2 19.7 7.2h452.6c7.4 0 14.3-2.7 
-      19.7-7.2L327.4 338.6z"/>
-  </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512">
+            <path fill="#EA4335" d="M502.3 190.8L327.4 338.6 502.3 482c6.1-5.1 9.7-12.6 
+              9.7-20.7V211.6c0-8.2-3.6-15.6-9.7-20.8z"/>
+            <path fill="#34A853" d="M10 190.8c-6.1 5.2-9.7 12.6-9.7 20.8v249.7c0 8.1 
+              3.6 15.6 9.7 20.7l174.9-143.4L10 190.8z"/>
+            <path fill="#FBBC04" d="M502.3 91.2c0-16.6-13.4-30-30-30H39.7c-16.6 
+              0-30 13.4-30 30v99.6L256 342.1l246.3-151.3V91.2z"/>
+            <path fill="#4285F4" d="M327.4 338.6L256 388.8l-71.4-50.2L10 482c5.4 
+              4.5 12.3 7.2 19.7 7.2h452.6c7.4 0 14.3-2.7 
+              19.7-7.2L327.4 338.6z"/>
+          </svg>          
+          Mail: <a href="mailto:bharatp0316@gmail.com">bharatp0316@gmail.com</a>
+        </div>
+        
+        
+        <div>  
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24 
+              11.72 11.72 0 0 0 3.68.59 1 1 0 0 1 1 1v3.5a1 
+              1 0 0 1-1 1A17 17 0 0 1 3 5a1 1 0 0 1 1-1h3.5a1 
+              1 0 0 1 1 1 11.72 11.72 0 0 0 .59 3.68 1 1 0 0 
+              1-.24 1.01l-2.23 2.1z"/>
+          </svg>            
+           Phone: <a href="tel:+918073750997">+91 80737 50997</a>
+        </div>
 
-          
-          Mail: <a href="mailto:bharatp0316@gmail.com">bharatp0316@gmail.com</a></div>
-        
-        
-          <div>
-  
-  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-    <path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24 
-      11.72 11.72 0 0 0 3.68.59 1 1 0 0 1 1 1v3.5a1 
-      1 0 0 1-1 1A17 17 0 0 1 3 5a1 1 0 0 1 1-1h3.5a1 
-      1 0 0 1 1 1 11.72 11.72 0 0 0 .59 3.68 1 1 0 0 
-      1-.24 1.01l-2.23 2.1z"/>
-  </svg>
-            
-         Phone: <a href="tel:+918073750997">+91 80737 50997</a></div>
         <div>
           <a href="https://www.google.com/maps/place/Your+Location" target="_blank" aria-label="Location">
-  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-    <path d="M8 0a5.53 5.53 0 0 0-5.5 5.5c0 3.357 5.5 10.5 5.5 
-      10.5s5.5-7.143 5.5-10.5A5.53 5.53 0 0 0 8 
-      0zm0 8a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
-  </svg>
-</a>
-          Location: Sirsi, Karnataka, India</div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M8 0a5.53 5.53 0 0 0-5.5 5.5c0 3.357 5.5 10.5 5.5 
+              10.5s5.5-7.143 5.5-10.5A5.53 5.53 0 0 0 8 
+              0zm0 8a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+            </svg>
+          </a>
+          Location: Sirsi, Karnataka, India
+        </div>
       </div>
     </section>
 
