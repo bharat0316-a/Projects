@@ -103,6 +103,7 @@
       <a href="#projects" onclick="closeMenu()">Projects</a>
       <a href="#certifications" onclick="closeMenu()">Certifications</a>
       <a href="#education" onclick="closeMenu()">Education</a>
+      <a href="#github" onclick="closeMenu()">GitHub</a>
       <a href="#contact" onclick="closeMenu()">Contact</a>
     </nav>
 
@@ -272,7 +273,24 @@
     <div id="lightbox" onclick="closeLightbox()">
       <img id="lightbox-img" src="" alt="Full View">
     </div>
-
+    <!--GitHub Section-->
+    <section id="github" data-aos="fade-up">
+      <h2>GitHub Stats</h2>
+      <div style="text-align:center;">
+        <img 
+          src="https://github-readme-stats.vercel.app/api?username=bharat0316-a&show_icons=true&theme=github_dark&hide_border=false&count_private=true" 
+          alt="GitHub Stats" 
+          style="max-width:100%; border-radius:12px; margin-bottom:1rem;"
+        />
+      </div>
+      <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+      <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
+      <div class="calendar" style="max-width:1000px; margin:auto;"></div>
+      <script>
+        GitHubCalendar(".calendar", "bharat0316-a");
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/github-calendar"></script>
+    </section>
     <!--Contact Section-->
     <section id="contact" data-aos="fade-up">
       <h2>Contact</h2>
@@ -344,8 +362,7 @@
               10.5s5.5-7.143 5.5-10.5A5.53 5.53 0 0 0 8 
               0zm0 8a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
             </svg>
-          </a>
-          Location: Sirsi, Karnataka, India
+          </a>Location: Sirsi, Karnataka, India
         </div>
       </div>
     </section>
@@ -374,10 +391,30 @@
       //Dark mode and light mode 
       // Theme toggle
       const toggle = document.getElementById('themeToggle');
-      toggle.addEventListener('change', () => {
-       document.body.classList.toggle('dark');
-      });
-    </script>
+
+      // Load saved theme from localStorage on page load
+      window.addEventListener('DOMContentLoaded', () => {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        document.body.classList.add('dark');
+        toggle.checked = true;
+      } else {
+        document.body.classList.remove('dark');
+        toggle.checked = false;
+      }
+    });
+
+    // Toggle theme and save to localStorage
+    toggle.addEventListener('change', () => {
+      if (toggle.checked) {
+        document.body.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.body.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+</script>
     <script>
       AOS.init({ duration: 1200, once: true });
     </script>
