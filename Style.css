@@ -9,6 +9,36 @@ body {
   scroll-behavior: smooth;
   transition: background 0.3s, color 0.5s;
 }
+/*Cusror Trail*/
+.cursor-dot {
+      position: fixed;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--curson-trail);
+      pointer-events: none;
+      z-index: 9999;
+    }
+    .cursor-trail {
+      position: fixed;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--curson-trail);
+      pointer-events: none;
+      z-index: 9998;
+      animation: trail-fade 0.6s linear forwards;
+    }
+    @keyframes trail-fade {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(0.3);
+        opacity: 0;
+      }
+    }
 /*Themes*/
 :root {
   --bg-color: #FEFEFF;
@@ -18,6 +48,7 @@ body {
   --section-bg: white;
   --footer-bg: #b5b289;
   --card: #f3f5f6;
+  --curson-trail: rgb(91, 167, 255);
 }
 body.dark {
   --bg-color: #242a36;
@@ -27,6 +58,7 @@ body.dark {
   --section-bg: rgb(14, 23, 41);
   --footer-bg: #111827;
   --card: #02050b;
+  --curson-trail: white;
 }
 /*Dark and light mode swith button */
 #ld {

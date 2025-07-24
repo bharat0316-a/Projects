@@ -9,7 +9,9 @@
         label.innerHTML = "Day";
         label.style.color="black";
       }
-    }
+ }
+
+
 //Resume 
 function openResume() {
   document.getElementById('resumeModal').style.display = 'flex';

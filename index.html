@@ -35,6 +35,7 @@
     </script>
   </head>
   <body>
+    <div class="cursor-dot" id="cursor-dot"></div>
     <header>
       <!--Theme changing button--> 
       <label class="theme-switch">
@@ -413,6 +414,21 @@
         document.body.classList.remove('dark');
         localStorage.setItem('theme', 'light');
       }
+    });
+
+    // Particle Cursor Effect
+    const cursor = document.getElementById('cursor-dot');
+    window.addEventListener('mousemove', e => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+
+      const trail = document.createElement('div');
+      trail.className = 'cursor-trail';
+      trail.style.left = e.clientX + 'px';
+      trail.style.top = e.clientY + 'px';
+      document.body.appendChild(trail);
+
+      setTimeout(() => trail.remove(), 600);
     });
 </script>
     <script>
