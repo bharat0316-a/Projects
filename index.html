@@ -396,9 +396,13 @@
       // Load saved theme from localStorage on page load
       window.addEventListener('DOMContentLoaded', () => {
       const savedTheme = localStorage.getItem('theme');
+      const toggle = document.getElementById("themeToggle");
+      const label = document.getElementById('ld');
       if (savedTheme === 'dark') {
         document.body.classList.add('dark');
         toggle.checked = true;
+        label.innerHTML = "Night";
+        label.style.color="White"
       } else {
         document.body.classList.remove('dark');
         toggle.checked = false;
