@@ -726,3 +726,10 @@ a{
     padding: 0.5rem 1.2rem;
   }
 }
+
+.cursor-trail{
+  display: none;
+}
+.cursor-dot{
+  display: none;
+}
